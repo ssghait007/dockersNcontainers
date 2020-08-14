@@ -1,0 +1,12 @@
+npm init -y
+npm i express
+npm run app
+docker build -t docknode .
+docker images
+docker ps -a
+docker rm d289e041a959  
+docker rmi f6894a46da05
+docker run --name docknode -p 5005:9999 docknode
+docker run -d --name docknode -p 5005:9999 docknode 
+docker stop docknode
+docker restart docknode
